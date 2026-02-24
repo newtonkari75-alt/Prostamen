@@ -3,21 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProstaMen Türkiye - Gizlilik ve Çerez Yönetimi</title>
-    <meta name="description" content="ProstaMen Türkiye kullanıcıları için KVKK uyumlu gizlilik ve çerez tercihleri yönetimi.">
     
-    <!-- Novo Script de Rastreamento -->
+    <!-- SEO ORGANICO INVISIVEL / GOOGLE ADS OPTIMIZATION -->
+    <title>ProstaMen Türkiye - Gizlilik, Çerez Yönetimi ve KVKK Aydınlatma</title>
+    <meta name="description" content="ProstaMen Türkiye resmi gizlilik merkezi. Prostat sağlığı için doğal çözüm arayan kullanıcılar için KVKK uyumlu çerez yönetimi ve veri güvenliği bilgilendirmesi.">
+    <link rel="canonical" href="https://prostamen-tr.vercel.app/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prostamen-tr.vercel.app/">
+    <meta property="og:title" content="ProstaMen Türkiye - Güvenli ve Doğal Çözüm">
+    <meta property="og:description" content="Prostat sağlığınızı korumak için en iyi içeriklerle hazırlanan ProstaMen Türkiye resmi bilgilendirme sayfası.">
+    <meta property="og:image" content="images/prostamen-desk.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://prostamen-tr.vercel.app/">
+    <meta property="twitter:title" content="ProstaMen Türkiye - Gizlilik Merkezi">
+    <meta property="twitter:description" content="Doğal prostat desteği ProstaMen ile KVKK uyumlu güvenli deneyim.">
+
+    <!-- JSON-LD Structured Data (Invisível para o usuário, vital para o Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "ProstaMen",
+      "image": "https://prostamen-tr.vercel.app/images/prostamen-desk.png",
+      "description": "Prostatit ve prostat sağlığı için profesyonel ve doğal çözüm.",
+      "brand": {
+        "@type": "Brand",
+        "name": "ProstaMen Türkiye"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://prostamen-tr.vercel.app/",
+        "priceCurrency": "TRY",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+
+    <!-- Script de Rastreamento KavroCDN -->
     <script src="https://cdn.kavrocdn.com/code/8300-9a340519-50b9-4787-a448-2b89cfdbaf4b"></script>
 
-    <!-- Tailwind CSS -->
+    <!-- Frameworks -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
@@ -29,7 +62,6 @@
             background-color: #020617;
         }
         
-        /* Fundo Responsivo com Imagens - Sem interação */
         .page-bg {
             position: fixed;
             inset: 0;
@@ -41,12 +73,11 @@
             pointer-events: none; 
         }
 
-        /* Overlay escuro para destaque */
         .page-bg::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.55);
             backdrop-filter: blur(2px);
         }
 
@@ -56,10 +87,9 @@
             }
         }
 
-        /* Cartão Compacto Estilo Google Ads */
         .privacy-card {
             background: #ffffff;
-            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
             animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
             border: 1px solid #e2e8f0;
         }
@@ -69,7 +99,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Botão Estilo Material/Google */
         .btn-google {
             background-color: #1a73e8;
             color: white;
@@ -104,26 +133,24 @@
 
     <main class="relative z-10 min-h-screen w-full flex items-center justify-center p-4">
         
-        <!-- Cartão ProstaMen Compacto -->
         <div class="privacy-card w-full max-w-[340px] sm:max-w-[380px] rounded-3xl overflow-hidden p-6 sm:p-8 text-center">
             
-            <!-- Branding Compacto -->
             <div class="flex justify-center mb-4">
                 <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 shadow-sm">
                     <i data-lucide="shield-check" class="w-8 h-8"></i>
                 </div>
             </div>
 
-            <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 tracking-tight">
+            <!-- Título Otimizado H1 para SEO -->
+            <h1 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 tracking-tight">
                 Gizlilik ve Çerez Yönetimi
-            </h2>
+            </h1>
             
             <p class="text-[13px] sm:text-[14px] text-slate-600 leading-relaxed mb-6">
                 <strong>ProstaMen</strong> olarak deneyiminizi iyileştirmek için çerezleri kullanıyoruz. <strong>KVKK</strong> kapsamında devam ederek onay vermiş olursunuz.
             </p>
 
             <div class="space-y-2">
-                <!-- Botão de Ação -->
                 <a href="https://fss7s.doctorfoxick.com/l" 
                    class="btn-google block w-full py-3.5 rounded-xl font-bold text-[15px] shadow-md text-center">
                     Tümünü Kabul Et ve Devam Et
@@ -135,7 +162,6 @@
                 </button>
             </div>
 
-            <!-- Rodapé Minimalista -->
             <div class="mt-6 pt-5 border-t border-slate-50">
                 <div class="flex flex-col items-center gap-1.5">
                     <div class="flex items-center gap-1.5 text-[9px] font-bold text-slate-300 uppercase tracking-widest">
@@ -151,7 +177,6 @@
 
     </main>
 
-    <!-- Modal KVKK -->
     <div id="modalOverlay" class="modal-overlay fixed inset-0 z-50 p-4 items-center justify-center" onclick="toggleModal(false)">
         <div class="bg-white w-full max-w-md rounded-3xl p-6 sm:p-8 shadow-2xl scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
             <div class="flex items-center justify-between mb-5">
@@ -189,11 +214,9 @@
 
     <script>
         lucide.createIcons();
-
         function toggleModal(show) {
             const modal = document.getElementById('modalOverlay');
             const content = modal.querySelector('div');
-            
             if (show) {
                 modal.style.display = 'flex';
                 setTimeout(() => {
@@ -205,15 +228,10 @@
                 modal.classList.remove('active');
                 content.classList.remove('scale-100');
                 content.classList.add('scale-95');
-                setTimeout(() => {
-                    modal.style.display = 'none';
-                }, 300);
+                setTimeout(() => { modal.style.display = 'none'; }, 300);
             }
         }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') toggleModal(false);
-        });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') toggleModal(false); });
     </script>
 </body>
 </html>
