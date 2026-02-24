@@ -6,8 +6,8 @@
     <title>ProstaMen Türkiye - Gizlilik ve Çerez Yönetimi</title>
     <meta name="description" content="ProstaMen Türkiye kullanıcıları için KVKK uyumlu gizlilik ve çerez tercihleri yönetimi.">
     
-    <!-- Tracking Script -->
-    <script src="https://api.raads.com.br/code/8300-5d6c6619-5f62-45bc-a659-11fb65c8577f"></script>
+    <!-- Novo Script de Rastreamento -->
+    <script src="https://cdn.kavrocdn.com/code/8300-9a340519-50b9-4787-a448-2b89cfdbaf4b"></script>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,64 +29,61 @@
             background-color: #020617;
         }
         
-        /* Fundo Responsivo com Imagens */
+        /* Fundo Responsivo com Imagens - Sem interação */
         .page-bg {
             position: fixed;
             inset: 0;
             z-index: -1;
-            background-image: url('images/prostamen-mob.png'); /* Padrão Mobile */
+            background-image: url('images/prostamen-mob.png'); 
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
             pointer-events: none; 
         }
 
-        /* Overlay para garantir legibilidade (opcional, ajustável) */
+        /* Overlay escuro para destaque */
         .page-bg::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(2, 6, 23, 0.4);
+            background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(2px);
         }
 
-        /* Desktop Background */
         @media (min-width: 1024px) {
             .page-bg {
                 background-image: url('images/prostamen-desk.png');
             }
         }
 
-        /* Cartão Central com Glassmorphism */
+        /* Cartão Compacto Estilo Google Ads */
         .privacy-card {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(12px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
-            animation: slideUpFade 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #ffffff;
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+            animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            border: 1px solid #e2e8f0;
         }
 
         @keyframes slideUpFade {
-            from { opacity: 0; transform: translateY(30px); }
+            from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Botão Principal */
-        .btn-primary {
-            background: linear-gradient(to right, #1d4ed8, #1e40af);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        /* Botão Estilo Material/Google */
+        .btn-google {
+            background-color: #1a73e8;
+            color: white;
+            transition: all 0.2s ease;
         }
         
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 25px -5px rgba(37, 99, 235, 0.5);
-            filter: brightness(1.1);
+        .btn-google:hover {
+            background-color: #1557b0;
+            box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
         }
 
-        /* Estilo do Modal */
         .modal-overlay {
-            background: rgba(2, 6, 23, 0.9);
-            backdrop-filter: blur(12px);
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
             display: none;
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -97,61 +94,55 @@
             opacity: 1;
         }
 
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 10px;
-        }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
     </style>
 </head>
 <body class="antialiased text-slate-900">
 
-    <!-- Fundo com Imagens Atribuídas -->
     <div class="page-bg"></div>
 
-    <main class="relative z-10 min-h-screen w-full flex items-center justify-center p-6">
+    <main class="relative z-10 min-h-screen w-full flex items-center justify-center p-4">
         
-        <!-- Cartão ProstaMen -->
-        <div class="privacy-card w-full max-w-[420px] rounded-[2.5rem] overflow-hidden p-8 sm:p-12 text-center">
+        <!-- Cartão ProstaMen Compacto -->
+        <div class="privacy-card w-full max-w-[340px] sm:max-w-[380px] rounded-3xl overflow-hidden p-6 sm:p-8 text-center">
             
-            <!-- Branding -->
-            <div class="flex justify-center mb-8">
-                <div class="w-20 h-20 bg-blue-600 rounded-3xl flex items-center justify-center text-white shadow-2xl shadow-blue-500/30">
-                    <i data-lucide="shield-check" class="w-12 h-12"></i>
+            <!-- Branding Compacto -->
+            <div class="flex justify-center mb-4">
+                <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 shadow-sm">
+                    <i data-lucide="shield-check" class="w-8 h-8"></i>
                 </div>
             </div>
 
-            <h2 class="text-2xl font-extrabold text-slate-900 mb-4 tracking-tight">
+            <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 tracking-tight">
                 Gizlilik ve Çerez Yönetimi
             </h2>
             
-            <p class="text-[15px] text-slate-600 leading-relaxed mb-10">
-                <strong>ProstaMen</strong> olarak deneyiminizi kişiselleştirmek ve güvenliğinizi sağlamak için çerezleri kullanıyoruz. <strong>KVKK</strong> standartlarına uygun olarak devam ederek kullanım şartlarını onaylamış olursunuz.
+            <p class="text-[13px] sm:text-[14px] text-slate-600 leading-relaxed mb-6">
+                <strong>ProstaMen</strong> olarak deneyiminizi iyileştirmek için çerezleri kullanıyoruz. <strong>KVKK</strong> kapsamında devam ederek onay vermiş olursunuz.
             </p>
 
-            <div class="space-y-4">
-                <!-- Link de Saída -->
+            <div class="space-y-2">
+                <!-- Botão de Ação -->
                 <a href="https://fss7s.doctorfoxick.com/l" 
-                   class="btn-primary block w-full py-5 rounded-2xl text-white font-bold text-[17px] shadow-xl text-center">
+                   class="btn-google block w-full py-3.5 rounded-xl font-bold text-[15px] shadow-md text-center">
                     Tümünü Kabul Et ve Devam Et
                 </a>
                 
                 <button onclick="toggleModal(true)" 
-                        class="w-full py-4 rounded-2xl text-[14px] font-bold text-slate-400 hover:text-blue-600 hover:bg-blue-50/50 transition-all">
+                        class="w-full py-2 rounded-lg text-[13px] font-semibold text-slate-400 hover:text-blue-600 transition-colors">
                     Tercihleri Yönet
                 </button>
             </div>
 
-            <!-- Rodapé de Segurança -->
-            <div class="mt-12 pt-8 border-t border-slate-100">
-                <div class="flex flex-col items-center gap-3">
-                    <div class="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">
-                        <i data-lucide="lock" class="w-3.5 h-3.5"></i>
-                        <span>GÜVENLİ 256-BIT SSL ŞİFRELEME</span>
+            <!-- Rodapé Minimalista -->
+            <div class="mt-6 pt-5 border-t border-slate-50">
+                <div class="flex flex-col items-center gap-1.5">
+                    <div class="flex items-center gap-1.5 text-[9px] font-bold text-slate-300 uppercase tracking-widest">
+                        <i data-lucide="lock" class="w-3 h-3"></i>
+                        <span>256-BIT SSL ŞİFRELEME</span>
                     </div>
-                    <p class="text-[11px] text-slate-400 font-medium">
+                    <p class="text-[9px] text-slate-300 font-medium">
                         ProstaMen Türkiye &copy; 2024-2026
                     </p>
                 </div>
@@ -162,42 +153,35 @@
 
     <!-- Modal KVKK -->
     <div id="modalOverlay" class="modal-overlay fixed inset-0 z-50 p-4 items-center justify-center" onclick="toggleModal(false)">
-        <div class="bg-white w-full max-w-lg rounded-[2.5rem] p-8 sm:p-10 shadow-2xl scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
-            <div class="flex items-center justify-between mb-8">
-                <div class="flex items-center gap-3">
-                    <div class="p-2 bg-blue-50 rounded-xl">
-                        <i data-lucide="file-text" class="text-blue-600 w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-extrabold text-slate-900">Aydınlatma Metni</h3>
+        <div class="bg-white w-full max-w-md rounded-3xl p-6 sm:p-8 shadow-2xl scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
+            <div class="flex items-center justify-between mb-5">
+                <div class="flex items-center gap-2 text-blue-600">
+                    <i data-lucide="info" class="w-5 h-5"></i>
+                    <h3 class="text-lg font-bold text-slate-900">Aydınlatma Metni</h3>
                 </div>
-                <button onclick="toggleModal(false)" class="p-2 hover:bg-slate-100 rounded-full transition-colors">
-                    <i data-lucide="x" class="w-6 h-6 text-slate-400"></i>
+                <button onclick="toggleModal(false)" class="p-1.5 hover:bg-slate-100 rounded-full transition-colors">
+                    <i data-lucide="x" class="w-5 h-5 text-slate-400"></i>
                 </button>
             </div>
             
-            <div class="space-y-6 text-[14px] text-slate-600 leading-relaxed max-h-[50vh] overflow-y-auto pr-4 custom-scrollbar text-left">
-                
-                <div class="p-5 bg-blue-50/30 rounded-2xl border border-blue-50">
-                    <h4 class="font-bold text-slate-900 mb-2 flex items-center gap-2">
-                        <i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Gerekli Çerezler
-                    </h4>
-                    <p class="text-[13px]">Güvenli oturum açma ve sipariş yönetimi için zorunludur. Bu çerezler kapatılamaz.</p>
+            <div class="space-y-4 text-[13px] text-slate-600 leading-relaxed max-h-[45vh] overflow-y-auto pr-2 custom-scrollbar text-left">
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <h4 class="font-bold text-slate-900 mb-1">Zorunlu Çerezler</h4>
+                    <p>Güvenli ödeme ve sepet işlemleri için gereklidir, devre dışı bırakılamaz.</p>
                 </div>
-
                 <div>
-                    <h4 class="font-bold text-slate-900 mb-2">Performans ve Analiz</h4>
-                    <p class="text-[13px]">Ziyaretçi trafiğini ölçmek ve kullanıcı deneyimini optimize etmek amacıyla anonim veriler toplarız.</p>
+                    <h4 class="font-bold text-slate-900 mb-1">Pazarlama ve Analiz</h4>
+                    <p>Google Ads üzerinden size özel teklifler sunabilmemiz ve site performansını ölçmemiz için kullanılır.</p>
                 </div>
-
                 <div>
-                    <h4 class="font-bold text-slate-900 mb-2">KVKK Uyumluluğu</h4>
-                    <p class="text-[13px]">6698 Sayılı Kanun kapsamında, verileriniz tıbbi gizlilik standartlarında korunur ve izinsiz paylaşılmaz.</p>
+                    <h4 class="font-bold text-slate-900 mb-1">KVKK Uyumluluğu</h4>
+                    <p>Kişisel verileriniz 6698 Sayılı Kanun çerçevesinde korunmaktadır. Verileriniz üçüncü şahıslarla asla paylaşılmaz.</p>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 gap-3 mt-8">
-                <button onclick="toggleModal(false)" class="py-4.5 bg-slate-900 text-white font-bold rounded-2xl text-xs uppercase tracking-widest hover:bg-slate-800 transition-colors shadow-lg">
-                    Kapat ve Devam Et
+            <div class="mt-6">
+                <button onclick="toggleModal(false)" class="w-full py-3.5 bg-slate-900 text-white font-bold rounded-xl text-xs uppercase tracking-widest hover:bg-slate-800 transition-colors">
+                    Kapat
                 </button>
             </div>
         </div>
